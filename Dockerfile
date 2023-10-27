@@ -9,4 +9,4 @@ RUN mvn clean package -Dmaven.test.skip
 FROM ubuntu/jre:17-22.04_edge
 WORKDIR /app
 COPY --from=build /build/target/cardatabase-0.0.1-SNAPSHOT.jar .
-CMD ["-jar", "cardatabase-0.0.1-SNAPSHOT.jar"]
+CMD ["-Djava.io.tmpdir=/home/app", "-jar", "cardatabase-0.0.1-SNAPSHOT.jar"]
