@@ -41,8 +41,8 @@ public class CardatabaseApplication {
 	return args -> {
 		// Save demo data to database
 		// Add owner objects and save these to the database
-		Owner owner1 = new Owner("Julie" , "Dooley");
-		Owner owner2 = new Owner("Bob" , "Robinson");
+		Owner owner1 = new Owner("John" , "Smith");
+		Owner owner2 = new Owner("James" , "Alice");
 		owner_repository.save(owner1);
 		owner_repository.save(owner2);
 		
